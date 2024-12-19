@@ -1,0 +1,29 @@
+
+var dashboardPage = $('.tb-dashboard-page')[0];
+
+var darkMode = $(dashboardPage).hasClass('dark');
+var darkModeExpression = darkMode ? '(darkMode !== false)' : 'darkMode';
+
+var img_url = "{i18n:custom.img_singledashboard}";
+
+return'<div class="header">' +
+        '<div fxLayoutAlign="flex-end" style="padding-right: 24px;">' +
+            '<button (click)="darkMode = '+darkModeExpression+' ? false : true" id="dark-mode-switch" mat-icon-button matTooltip="{{ '+ darkModeExpression +' ? &quot;{i18n:custom.switch_light}&quot; : &quot;{i18n:custom.switch_dark}&quot; }}"><mat-icon>{{ '+ darkModeExpression +' ? &quot;light_mode&quot; : &quot;dark_mode&quot; }}</mat-icon></button>' +
+        '</div>' +
+        '<img src="/api/images/public/'+img_url+'" class="img_map" width="100%" height="507.95px" alt="Map-thailand.jpg" />'+
+        '<button id="ToLMP" class="btn btn1"></button>'+
+        '<button id="ToPJT" class="btn btn2"></button>'+
+        '<button id="ToNKL" class="btn btn3"></button>'+
+        '<button id="ToBCN" class="btn btn4"></button>'+
+        '<button id="ToSMK" class="btn btn5"></button>'+
+        '<button id="ToBPO" class="btn btn6"></button>'+
+        '<button id="ToSGK" class="btn btn7"></button>'+
+        '<button id="ToSDO" class="btn btn8"></button>'+
+
+        '<button id="ToKKY" class="btn btn9"></button>'+
+        '<button id="ToLKB" class="btn btn10"></button>'+
+        '<button id="ToSAK" class="btn btn11"></button>'+
+        '<button id="ToLCB" class="btn btn12"></button>'+
+        '<button id="ToMTP" class="btn btn13"></button>'+
+        '<button id="ToBPE" class="btn btn14"></button>'+
+    '</div>';
